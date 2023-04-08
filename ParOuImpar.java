@@ -19,8 +19,19 @@ public class ParOuImpar {
             return "Ímpar";
         }
     }
+
+    public void saudacao(){
+        System.out.println("Bem-vindo ao teste de paridade!");
+    }
+
+    public void despedida(){
+        System.out.println("Obrigado por utilizar o teste de paridade!");
+    }
+
     public static void main(String[] args) {
         ParOuImpar parOuImpar = new ParOuImpar();
+
+        parOuImpar.saudacao();
         
         do {
             System.out.print("Digite um número inteiro: ");
@@ -33,6 +44,7 @@ public class ParOuImpar {
             System.out.print("Deseja fazer um novo teste de paridade? (Sim ou Não): ");
         } while (parOuImpar.scanner.next().equalsIgnoreCase("Sim"));
 
+        parOuImpar.despedida();
         parOuImpar.scanner.close();
     }
     
